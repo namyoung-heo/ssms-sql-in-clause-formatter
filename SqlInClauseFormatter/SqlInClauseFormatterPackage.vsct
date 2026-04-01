@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidSqlInClauseFormatterPackage">
+
+    <Groups>
+      <Group guid="guidSqlInClauseFormatterPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidSqlInClauseFormatterPackageCmdSet" id="ConvertToInClauseCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSqlInClauseFormatterPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>SQL IN절 변환</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+  </Commands>
+
+  <KeyBindings>
+    <!-- 텍스트 에디터 컨텍스트에서 Ctrl+Shift+Q -->
+    <KeyBinding guid="guidSqlInClauseFormatterPackageCmdSet"
+                id="ConvertToInClauseCommandId"
+                editor="guidVSStd97"
+                key1="I" mod1="Control Alt" />
+    <KeyBinding guid="guidSqlInClauseFormatterPackageCmdSet"
+                id="ConvertToInClauseCommandId"
+                editor="GUID_TextEditorFactory"
+                key1="I" mod1="Control Alt" />
+  </KeyBindings>
+
+  <UsedCommands>
+    <UsedCommand guid="guidSqlInClauseFormatterPackageCmdSet" id="ConvertToInClauseCommandId" />
+  </UsedCommands>
+
+  <VisibilityConstraints>
+    <VisibilityItem guid="guidSqlInClauseFormatterPackageCmdSet" id="ConvertToInClauseCommandId" context="GUID_TextEditorFactory" />
+  </VisibilityConstraints>
+
+  <Symbols>
+    <GuidSymbol name="guidSqlInClauseFormatterPackage" value="{b1c2d3e4-f5a6-4789-0abc-def123456789}" />
+
+    <GuidSymbol name="guidSqlInClauseFormatterPackageCmdSet" value="{c2d3e4f5-a6b7-4890-1bcd-ef1234567890}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="ConvertToInClauseCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="GUID_TextEditorFactory" value="{8B382828-6202-11D1-8870-0000F87579D2}" />
+  </Symbols>
+
+</CommandTable>
