@@ -29,7 +29,7 @@ C
 
 ## Keyboard Shortcut
 
-`Ctrl+K, Ctrl+I` (two-step chord shortcut)
+`Ctrl+Alt+I` (two-step chord shortcut)
 
 ## Installation
 
