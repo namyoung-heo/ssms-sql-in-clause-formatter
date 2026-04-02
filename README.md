@@ -56,7 +56,7 @@ C
 
 1. Open a query editor in SSMS
 2. Select the text you want to convert (line-separated values)
-3. Press `Ctrl+K`, then `Ctrl+I`
+3. Press `Ctrl+ALT+I`
 4. The selected text is replaced with the IN clause format
 
 ## License
